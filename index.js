@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 const users=[{name:'Tony', email:'tony@mail.com'}]
 
 app.get('/',(_,res)=>{
-    res.send('Your Express app');
+    res.send('Application on HEROKU CLOUDS');
 })
 app.get('/users',(_,res)=>{
     res.json({ok:true,users});
