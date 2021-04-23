@@ -27,6 +27,7 @@ app.post('/adduser',(req,res)=>{
     if(name&&email){
         users.push({name,email});
         res.json({ok:true,users});
+        res.send("Succesful user added")
     }
 })
 
