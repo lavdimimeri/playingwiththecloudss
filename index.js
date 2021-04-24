@@ -5,31 +5,31 @@ const app= express();
 const port=process.env.PORT || 8888;
 
 app.use(bodyParser.urlencoded({extended:false}));
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 
-const users=[{name:'Tony', email:'tony@mail.com'}]
+//const users=[{name:'Tony', email:'tony@mail.com'}]
 
 app.get('/',(_,res)=>{
-    res.send('Application on HEROKU CLOUDS');
+    res.send('Application on HEROKU CLOUDS -Lavdim Imeri');
 })
-app.get('/users',(_,res)=>{
-    res.json({ok:true,users});
-})
+//app.get('/users',(_,res)=>{
+ //   res.json({ok:true,users});
+//})
 
-app.get('/user/:name',(req,res)=>{
- const{name}=req.params;
- const user = users.filter((user)=>user.name===name)[0];
- res.json({ok:true,user});
-})
+//app.get('/user/:name',(req,res)=>{
+// const{name}=req.params;
+// const user = users.filter((user)=>user.name===name)[0];
+// res.json({ok:true,user});
+//})
 
-app.post('/adduser',(req,res)=>{
-    const {name,email}=req.body;
-    if(name&&email){
-        users.push({name,email});
-        res.json({ok:true,users});
-        res.send("Succesful user added")
-    }
-})
+//app.post('/adduser',(req,res)=>{
+//    const {name,email}=req.body;
+//    if(name&&email){
+ //       users.push({name,email});
+ //       res.json({ok:true,users});
+//        res.send("Succesful user added")
+ //   }
+//})
 
 app.get('/calc',function(req,res){
 
